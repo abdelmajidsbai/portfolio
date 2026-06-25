@@ -1,0 +1,926 @@
+html, body {
+  height: 80%;       /* make html and body take full screen height */
+  margin: auto;          /* remove default margin */
+  padding: 0;         /* remove default padding */
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+
+.vertical-navbar {
+  position: fixed;
+  left: 5%;
+  top: 0;
+  width: 60px;              /* 👈 thinner navbar */
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  z-index: 100;
+  padding: 5px;
+}
+
+@media (max-width: 992px) {
+  .vertical-navbar {
+  left: 0;
+}
+}
+
+/* sections of navbar */
+.vertical-navbar .logo {
+  flex: 0 0 20%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.vertical-navbar .links {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  gap: 30px; 
+ 
+}
+
+.vertical-navbar .fin {
+  flex: 0 0 20%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+/* link styling */
+.links a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+
+  display: flex;             
+  justify-content: center;   
+  align-items: center;        
+
+  transition: 0.3s;          
+  text-align: center;    
+}
+
+
+
+.links a {
+  color: black;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #00d4ff;
+   transform: translateX(1px);
+}
+
+.links a.active {
+  color:  #00d4ff;
+  border: 2px solid  #00d4ff;
+}
+
+
+.logo {
+  margin-left: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logo a {
+  text-decoration: none;
+  color: rgb(5, 38, 89); /* dark text */
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #00d4ff; /* subtle hover accent */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main content offset */
+
+
+
+
+.main-content {
+  padding: 0;
+  margin-left: 0px; /* space for navbar */
+  width: calc(100% - 0px);
+}
+
+/* Each section takes full vertical space */
+section {
+  
+  padding: 20px 20px;  /* smaller padding to center text better */
+  box-sizing: border-box;
+  scroll-margin: 0;     /* reset the offset */
+} 
+
+
+
+
+
+/* Home page*/
+#home ,#about,#services,#formation,#contact,#projects{
+  padding: 0px 0px;
+  top: 0;
+  margin-top: 0;
+}
+
+.homepage{
+  width: 80%;  
+  height: 100vh;                 /* Full screen height */
+  display: flex;
+  flex-direction: column;            /* Stack elements vertically */
+  justify-content: center;           /* Center vertically */
+  align-items: center;               /* Center horizontally */
+  text-align: center;
+    
+  margin: auto;
+}
+.nomdiv{
+  color: rgb(5, 38, 89);
+}
+.imgdiv{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.imgdiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  */
+
+
+
+
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* === FIRST LINE (photo + text) === */
+.line1 {
+  display: flex;
+  flex-wrap: wrap; /* will wrap on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 15px;
+}
+
+.myInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  padding: 10px;
+}
+
+.imginfo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.nameInfo h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: rgb(5, 38, 89);
+}
+
+.nameInfo h3 , H4 {
+  color: rgb(5, 38, 89);
+}
+
+.aboutMe {
+  flex: 2;
+  width: 100%;
+  text-align: justify;
+  line-height: 1.6;
+}
+.aboutMe p{
+  color: rgb(5, 38, 89);
+}
+
+/* === SECOND LINE (competences) === */
+.line2 {
+  
+  padding: 15px;
+   width: fit-content; /* ✅ this makes it take only the needed width */
+  justify-content: center; /* optional: center items inside if wrapped */
+}
+.line2 h3{
+  padding-left: 20px;
+}
+
+.skills  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  
+  margin: 0px;
+}
+
+.skills  ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  width: fit-content;
+  justify-content: center;
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1 1 200px; /* flexible boxes */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 0px;
+  
+}
+
+.skills  li {
+  font-weight: 500;
+  
+}
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #052659; /* your brand color */
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+.mediadiv {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mediadiv a {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mediadiv a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+
+
+/* Services page */
+.topServ{
+  background-color: white;
+}
+.topServ h2{
+  text-align: center;
+}
+
+.allServices{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 25px;
+  
+}
+.allServices .serv{
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: auto;
+  padding: 1rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+ 
+}
+@media (max-width: 992px) {
+  .line1 {
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.about {
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+}
+
+@media (max-width: 700px) {
+  .myInfo {
+  flex-direction: column;
+  gap: 0px;
+}
+}
+
+
+
+.topServ .services-detailes{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color:#f5f5f5 ;
+ 
+}
+.serv:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.serv .icon i {
+  font-size: 48px;
+  color: #052659; /* brand color */
+  margin-bottom: 10px;
+}
+
+hr{
+  
+  padding: 1px;
+  background-color: #00d4ff;
+}
+
+  
+
+
+
+
+
+/* Formation page */
+
+.topForm {
+  padding: 20px 20px;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.topForm h2 {
+  font-size: 2rem;
+  margin: 8px;
+  color: #222;
+  position: relative;
+  font-weight: 700;
+}
+
+.topServ h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00d4ff;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.allFormation {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+
+
+.forTer {
+  display: flex;
+  width: 85%;
+  gap: 10px;
+  justify-content: center;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+.forTer h3 {
+  color: #00d4ff;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #00d4ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+
+.form {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.divFor span i {
+  font-size: 20px;
+}
+
+.divFor.terminer i {
+  color: #4caf50; /* green for completed */
+}
+
+.divFor.encour i {
+  color: #ff9800; /* orange for ongoing */
+  animation: spin 2s linear infinite; /* subtle rotation effect */
+}
+
+
+.formImg {
+  display: flex;
+  gap: 10px;
+  text-align: start;
+  
+}
+
+.formImg img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.formImg h4 {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+
+.divFor  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divFor h4 {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .forTer {
+  display: block;
+  
+}
+  .allFormation {
+    width: 95%;
+    flex-direction: column;
+}
+}
+
+.spanFormation{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.allProjects {
+  padding: 20px 20px;
+  text-align: center;
+  background:  white;
+}
+
+.allProjects h2 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 700;
+  margin:5px;
+  position: relative;
+}
+
+.allProjects h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00d4ff;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.topPojects h3 {
+  color: #00d4ff;
+  font-size: 1.4rem;
+  margin: 50px 0 25px;
+  border-bottom: 2px solid #00d4ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Container for projects */
+.projectEncour,
+.projectTerminer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-items: center;
+}
+
+/* 🌟 Project card — wide (landscape) style */
+.pr {
+ 
+  background-color: rgb(5, 38, 89);
+  border-radius: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  
+  display: block;
+  align-items: center;
+  gap: 5px;
+  padding: 0px;
+  text-align: left;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.pr:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image inside card */
+.pr  img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  
+}
+
+/* Text part */
+.pr div {
+  flex: 1;
+}
+
+.pr h1 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.pr p {
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding: 10px;
+}
+
+/* 🌐 Responsive behavior */
+@media (max-width: 992px) {
+  .projectEncour,
+  .projectTerminer {
+    grid-template-columns: 1fr; /* only one per line */
+  }
+
+  .pr {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .pr img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .pr div {
+    text-align: left;
+    width: 100%;
+  }
+  .projects-filter ul{
+    padding: 5px;
+    width: 100%;
+    
+  
+
+}
+
+}
+
+@media (max-width: 480px) {
+  .allProjects {
+    padding: 40px 5%;
+  }
+
+  .pr {
+    width: 100%;
+    min-height: 400px;
+    padding: 5px;
+  }
+
+  .pr img {
+    height: 200px;
+  }
+
+  .pr h1 {
+    font-size: 1.2rem;
+  }
+
+  .pr p {
+    font-size: 0.9rem;
+  }
+  .projects-filter ul{
+    padding: 10px;
+    width: 100%;
+  
+
+  }
+}
+
+
+
+/* Projects filter */
+.projects-filter{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+.projects-filter ul{
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+
+
+}
+.projects-filter ul li{
+  width: 80px;
+  list-style: none;
+  cursor: pointer;
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #00d4ff;
+  text-align: center; 
+ 
+
+}
+.projects-filter ul li:hover{
+  color: #00d4ff;
+}
+
+@media (max-width: 992px) {
+  .projects-filter ul{
+    padding: 10px;
+    width: 80%;
+    gap: 5px;
+}
+
+}
+
+.fin p{
+  writing-mode: vertical-rl;
+  text-decoration: none;
+}
+.fin a{
+  text-decoration: none;
+}
+
+.tag{
+  color: #00d4ff; 
+}
+
+/* i'm full stack devlopper*/
+.typing{
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+/* Contact page */
+.contactContainer{
+  width: 80%;
+  margin: auto;
+
+  
+}
+.contactContainer h2{
+  text-align: center;
+}
+.contactContainer .formulaire{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  
+  
+ 
+}
+.contactContainer .formulaire input{
+  padding: 10px;
+}
+.labInp textarea{
+  width:90% ;
+} 
+.labInp{
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.labInp input{
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgb(5, 38, 89);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.labInp textarea{
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgb(5, 38, 89);
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.labInp label{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
+  background: white;
+  padding: 0 5px;
+}
+
+.labInp input:focus + label,
+.labInp input:not(:placeholder-shown) + label{
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: black;
+}
+.labInp textarea:focus + label,
+.labInp textarea:not(:placeholder-shown) + label{
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: black;
+}
+
+
+#send{
+  width: 100%;
+  text-align: end;
+
+}
+.send{
+  background-color: rgb(5, 38, 89);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width:700px){
+  .contactContainer .formulaire{
+    width: 80%;
+
+}
+}
+
+
+.vertical-line{
+  width: 1px;
+  height: 150px;
+  border: none;
+  background-color: rgb(5, 38, 89); /* wla ay color bghiti */
+}
+@media (max-width: 700px) {
+  .vertical-line{
+  width: 150px;
+  height: 1px;
+  border: none;
+  background-color: rgb(5, 38, 89); /* wla ay color bghiti */
+}
+
+}
+
+/* demo vedio  */
+.modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content{
+  width: 80%;
+  max-width: 900px;
+}
+
+.modal-content video{
+  width: 100%;
+}
