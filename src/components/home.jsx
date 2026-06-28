@@ -33,13 +33,13 @@ function Home() {
         <h3 className="typing">I'm {titles[index]}</h3>
       </div>
       <div className="mediadiv">
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/abdelmajid_sbai/" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={28} color="#E1306C" />
         </a>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://web.facebook.com/profile.php?id=61557458252113" target="_blank" rel="noopener noreferrer">
           <FaFacebook size={28} color="#1877F2" />
         </a>
-        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/abdelmajidsbai/" target="_blank" rel="noopener noreferrer">
           <FaGithub size={28} color="#333" />
         </a>
       </div>
