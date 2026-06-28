@@ -51,6 +51,7 @@ section {
   align-items: center;
   padding: 10px 0;
   gap: 30px; 
+  
  
 }
 
@@ -69,8 +70,8 @@ section {
   height: 30px;
   border-radius: 50%;
   background: transparent;
-  border: 2px solid black;
-  color: black;
+  border: 2px solid #052659;
+  color: #052659;
   text-decoration: none;
 
   display: flex;             
@@ -83,10 +84,7 @@ section {
 
 
 
-.links a {
-  color: black;
-  transition: 0.3s;
-}
+
 
 .links a:hover {
   color: #00d4ff;
@@ -400,7 +398,8 @@ section {
 hr{
   
   padding: 1px;
-  background-color: #00d4ff;
+  background-color: #052659;
+  border: none;
 }
 
   
@@ -413,8 +412,16 @@ hr{
 
 .topForm {
   padding: 20px 20px;
-  background: #f7f9fc;
   text-align: center;
+}
+.topForm h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
 
 .topForm h2 {
@@ -472,9 +479,10 @@ hr{
 
 .form {
   background: white;
-  border-radius: 8px;
+  border-radius: 0px;
   padding: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border: 2px solid rgb(5, 38, 89);
   text-align: center;
   transition: 0.3s ease;
   margin-bottom: 5px;
@@ -614,7 +622,6 @@ hr{
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   width: 400px;
-  
   display: block;
   align-items: center;
   gap: 5px;
@@ -657,6 +664,19 @@ hr{
   margin-bottom: 8px;
   padding: 10px;
 }
+.linkProject{
+  text-decoration: none;
+  color: white;
+}
+.linkProject:hover{
+  text-decoration: none;
+  color: white;
+  transform: scale(1.3);
+}
+.projectDetail{
+  display: flex;
+  justify-content: space-around;
+}
 
 /* 🌐 Responsive behavior */
 @media (max-width: 992px) {
@@ -697,8 +717,6 @@ hr{
 
   .pr {
     width: 100%;
-    min-height: 400px;
-    padding: 5px;
   }
 
   .pr img {
@@ -742,17 +760,19 @@ hr{
   width: 80px;
   list-style: none;
   cursor: pointer;
-  background: white;
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 2px solid #00d4ff;
+  background: rgb(5, 38, 89);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50px;
+  border: 2px solid  rgb(5, 38, 89);
   text-align: center; 
  
 
 }
 .projects-filter ul li:hover{
-  color: #00d4ff;
+  color: rgb(5, 38, 89);
+  background-color: white;
+  border: 2px solid  rgb(5, 38, 89);
 }
 
 @media (max-width: 992px) {
@@ -796,23 +816,38 @@ hr{
 
 /* Contact page */
 .contactContainer{
-  width: 80%;
+  width: 75%;
   margin: auto;
+  background-color: rgb(5, 38, 89);
+  padding: 10px;
+   padding-bottom: 50px;
 
   
 }
+
 .contactContainer h2{
   text-align: center;
+  color: white;
+}
+.contactContainer h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
 .contactContainer .formulaire{
   width: 50%;
   margin: auto;
   text-align: center;
   padding: 20px;
-  
-  
- 
+  background-color: white;
+  border-radius: 10px;
 }
+
+
 .contactContainer .formulaire input{
   padding: 10px;
 }
@@ -873,20 +908,30 @@ hr{
 
 #send{
   width: 100%;
-  text-align: end;
+  display: flex;
+  justify-content: space-around;
+
+  
 
 }
 .send{
   background-color: rgb(5, 38, 89);
   color: white;
   border-radius: 5px;
+  padding: 10px 15px;
   cursor: pointer;
+  
 }
 @media (max-width:700px){
   .contactContainer .formulaire{
-    width: 80%;
-
-}
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .contactContainer {
+    padding: 10px; 
+    padding-bottom: 50px;
+  }
 }
 
 
@@ -924,3 +969,30 @@ hr{
 .modal-content video{
   width: 100%;
 }
+
+.demoVid{
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+
+}
+.demoVid:hover{
+ transform: scale(1.1);
+
+}
+
+
+/* contact page  */
+.status {
+ 
+  padding: 5px 10px;
+  background: rgb(5, 38, 89);
+  border: 1px solid #00d4ff;
+  color: white;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0;
+}
+

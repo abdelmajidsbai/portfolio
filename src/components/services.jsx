@@ -12,9 +12,9 @@ function Services() {
           <h4>Web Development</h4>
           <hr />
           <div className='details-ser'>
-            <p>Development des site web full stack</p>
-            <p>Site vitrine</p>
-            <p>Portfolio</p>
+            <p>Full-Stack Web Development</p>
+            <p>Front-end Website Development</p>
+            <p>Portfolio Website Development</p>
           </div>
         </div>
 
@@ -23,16 +23,16 @@ function Services() {
           <h4>UI/UX Design</h4>
           <hr />
           <div className='details-ser'>
-            <p>Design site web with Figma</p>
+            <p>Website UI/UX Design using Figma</p>
           </div>
         </div>
         
         <div className="serv">
           <span className="icon"><FaFileExcel size={48} color="#052659" /></span>
-          <h4>Excel</h4> 
+          <h4>Microsoft Excel</h4> 
           <hr />
           <div className='details-ser'>
-            <p>Travailer des fichier excel</p>
+            <p>Excel spreadsheets, formulas, and data management</p>
           </div>
         </div>
       </div>

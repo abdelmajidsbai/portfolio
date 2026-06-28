@@ -20,11 +20,11 @@ function Formation() {
           </div>
           <hr />
           <div className="divFor">
-            <span className='spanFormation'><i class="icon-check"></i><b>2024</b></span>
+            <span className='spanFormation'><i className="icon-check"></i><b>2024</b></span>
             <h5>Diplôme : Développement Digital – Option Web Full Stack</h5>
           </div>
           <div className="divFor">
-            <span className='spanFormation'><i class="icon-check"></i><b>2024</b></span>
+            <span className='spanFormation'><i className="icon-check"></i><b>2024</b></span>
             <h5>Formation : CERTIFICAT de formation qualifiante filiere programme de l’innovation entrepreneuriale</h5>
           </div>
         </div>
@@ -36,11 +36,11 @@ function Formation() {
           </div>
           <hr />
           <div className="divFor">
-            <span className='spanFormation'><i class="icon-check"></i><b>2025</b></span>
+            <span className='spanFormation'><i className="icon-check"></i><b>2025</b></span>
             <h5>Diplôme : DEUG en Management des Ressources Humaines</h5>
           </div>
           <div className="divFor">
-            <span className='spanFormation'><i class="icon-check"></i><b>2026</b></span>
+            <span className='spanFormation'><i className="icon-check"></i><b>2026</b></span>
             <h5>Licence : Comptabilité finance et fiscalité</h5>
           </div>
         </div>

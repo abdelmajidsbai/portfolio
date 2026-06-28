@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import portfolio from '../images/projects/portfolio.png';
-import portfolioVed from '../images/projects/portfolio.mp4';
+import formation from '../images/projects/formation.png';
+import formationVed from '../images/projects/formation.mp4';
 import anime from '../images/projects/anime.png';
-// import animeVed from '../images/projects/anime.mp4';
-
+import electric from '../images/projects/electric.png';
+import animeVed from '../images/projects/anime.mp4';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 
 
@@ -12,10 +14,11 @@ function Projects() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const projects=[
-    {id:1,title:'Projet 1',link:"",type:'Vitrine',tools:'ReactJs - HTML - CSS - JS ',idea:'Portfolio',img:portfolio, video:portfolioVed,},
-    {id:2,title:'Projet 2',type:'Vitrine',tools:'HTML - CSS - JS',idea:'Anime web site ',img:anime,},
-    {id:3,title:'Projet 3',type:'Full stack',tools:'Laravel - HTML - CSS - JS',idea:'Gestion des formation inter-enreprise',img:portfolio},
-    {id:4,title:'Projet 4',type:'Full stack',tools:'Laravel - HTML - CSS - JS ',idea:'E-commerce site',img:portfolio},
+    {id:1,title:'Portfolio',type:'Vitrine',tools:'ReactJs - HTML - CSS - JS ',img:portfolio, link:"https://abdelmajid-sbai.netlify.app/"},
+    {id:4,title:'E-commerce web site',type:'Full stack',tools:'Laravel - HTML - CSS - JS ',img:electric , link:"https://maisonfix-production.up.railway.app/"},
+    {id:2,title:'Anime web site',type:'Vitrine',tools:'HTML - CSS - JS',img:anime, video:animeVed,},
+    {id:3,title:'formation inter-enreprise',type:'Full stack',tools:'Laravel - HTML - CSS - JS',img:formation , video:formationVed,},
+    
     
   ];
 
@@ -34,8 +37,6 @@ function Projects() {
             <li key={category} className={filter===category?"active":""} onClick={()=>setFilter(category)}>
               {category}
             </li>
-
-            
           ))}
         </ul>
         
@@ -45,12 +46,18 @@ function Projects() {
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project)=>(
             <div className='pr' key={project.id}>
-                <img src={project.img} alt={project.id} />
-              <h1>{project.title} <span><a href="">{project.link}</a></span> <button onClick={() => setSelectedVideo(project.video)}>
-               Watch Demo
-              </button></h1>
+              <img src={project.img} alt={project.id} />
+                <h1 className='projectDetail'>{project.title} {project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className='linkProject'>
+                      <FaExternalLinkAlt  />
+                    </a>
+                ) : project.video ? (
+                  <button className='demoVid' onClick={() => setSelectedVideo(project.video)}>
+                    Demo
+                  </button>
+                ) : null}</h1>
               <p><strong>Outils : </strong>{project.tools}</p>
-              <p className='idea'><strong>Idée : </strong>{project.idea}</p>
+              
               
 
 

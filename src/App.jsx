@@ -16,7 +16,7 @@ function App() {
     <Router>
 
       <div className="app-container">
-      <Navbar />  {/* vertical navbar */}
+      <Navbar />  
       <div className="main-content">
         <section id="home"><Home /></section>
         <section id="about"><About /></section>
