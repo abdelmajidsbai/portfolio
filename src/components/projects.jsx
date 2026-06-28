@@ -15,9 +15,10 @@ function Projects() {
 
   const projects=[
     {id:1,title:'Portfolio',type:'Vitrine',tools:'ReactJs - HTML - CSS - JS ',img:portfolio, link:"https://abdelmajid-sbai.netlify.app/"},
-    {id:4,title:'E-commerce web site',type:'Full stack',tools:'Laravel - HTML - CSS - JS ',img:electric , link:"https://maisonfix-production.up.railway.app/"},
-    {id:2,title:'Anime web site',type:'Vitrine',tools:'HTML - CSS - JS',img:anime, video:animeVed,},
+    {id:2,title:'E-commerce web site',type:'Full stack',tools:'Laravel - HTML - CSS - JS ',img:electric , link:"https://maisonfix-production.up.railway.app/"},
     {id:3,title:'formation inter-enreprise',type:'Full stack',tools:'Laravel - HTML - CSS - JS',img:formation , video:formationVed,},
+    {id:4,title:'Anime web site',type:'Vitrine',tools:'HTML - CSS - JS',img:anime, video:animeVed,},
+    
     
     
   ];
